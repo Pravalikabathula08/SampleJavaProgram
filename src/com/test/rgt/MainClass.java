@@ -14,7 +14,7 @@ public class MainClass {
 		boolean exit = false;
 
 		while (!exit) {
-			System.out.println("Vehicle Rental System - List");
+			System.out.println("Vehicle Rental System");
 			System.out.println("1. Add Vehicle");
 			System.out.println("2. List Available Vehicles");
 			System.out.println("3. Rent a Vehicle");
@@ -24,7 +24,7 @@ public class MainClass {
 
 			System.out.print("Enter your choice: ");
 			int choice = scanner.nextInt();
-			scanner.nextLine(); 
+			scanner.nextLine();
 
 			switch (choice) {
 			case 1:
@@ -44,6 +44,7 @@ public class MainClass {
 				break;
 			case 6:
 				exit = true;
+				System.out.println("Exit");
 				break;
 			default:
 				System.out.println("Invalid choice. Please try again.");
@@ -87,7 +88,6 @@ public class MainClass {
 			System.out.println("Invalid vehicle type. Vehicle not added.");
 			return;
 		}
-
 		rentalService.addVehicle(vehicle);
 		System.out.println("Vehicle added successfully.");
 	}
@@ -167,7 +167,7 @@ public class MainClass {
 			BigDecimal rentalCost = rentalService.calculateRentalCost(rental);
 			System.out.println("Rental Cost: $" + rentalCost);
 		} else {
-			System.out.println("Invalid rental ID");
+			System.out.println("Invalid rental ID.");
 		}
 	}
 
@@ -179,12 +179,12 @@ public class MainClass {
 		if (rental != null) {
 			boolean success = rentalService.returnVehicle(rental);
 			if (success) {
-				System.out.println("Vehicle returned successfully...");
+				System.out.println("Vehicle returned successfully.");
 			} else {
-				System.out.println("Failed to return the vehicle");
+				System.out.println("Failed to return the vehicle.");
 			}
 		} else {
-			System.out.println("Invalid rental ID");
+			System.out.println("Invalid rental ID.");
 		}
 	}
 }
