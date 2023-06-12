@@ -55,7 +55,7 @@ public class MainClass {
 	}
 
 	private static void addVehicle(RentalService rentalService, Scanner scanner) {
-		System.out.print("Enter the type of vehicle (car, motorcycle, bicycle): ");
+		//System.out.print("Enter the type of vehicle (car, motorcycle, bicycle): ");
 		String type = scanner.nextLine();
 
 		System.out.print("Enter the license plate: ");
@@ -69,7 +69,7 @@ public class MainClass {
 
 		Vehicle vehicle;
 		switch (type) {
-		case "car":
+		case "kjkhj":
 			System.out.print("Enter the number of doors: ");
 			int numDoors = scanner.nextInt();
 			vehicle = new Car(licensePlate, make, model, numDoors);
